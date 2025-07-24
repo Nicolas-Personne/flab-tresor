@@ -1,0 +1,38 @@
+[
+	{
+		"id": 0,
+		"pass": "toto",
+		"indiceLocalisation": "Pour trouver le prochain indice, vous devrez vous rendre ...",
+		"indicePassword": "Le mot de passe qui vous premettra d'accèder à l'incide suivane est ..."
+	},
+	{
+		"id": 1,
+		"pass": "toto",
+		"indiceLocalisation": "Pour trouver le prochain indice, vous devrez vous rendre ...",
+		"indicePassword": "Le mot de passe qui vous premettra d'accèder à l'incide suivane est ..."
+	},
+	{
+		"id": 2,
+		"pass": "tata",
+		"indiceLocalisation": "Pour trouver le prochain indice, vous devrez vous rendre ...",
+		"indicePassword": "Le mot de passe qui vous premettra d'accèder à l'incide suivane est ..."
+	},
+	{
+		"id": 3,
+		"pass": "tutu",
+		"indiceLocalisation": "Pour trouver le prochain indice, vous devrez vous rendre ...",
+		"indicePassword": "Le mot de passe qui vous premettra d'accèder à l'incide suivane est ..."
+	},
+	{
+		"id": 4,
+		"pass": "titi",
+		"indiceLocalisation": "Pour trouver le prochain indice, vous devrez vous rendre ...",
+		"indicePassword": "Le mot de passe qui vous premettra d'accèder à l'incide suivane est ..."
+	},
+	{
+		"id": 5,
+		"pass": "tptp",
+		"indiceLocalisation": "Pour trouver le prochain indice, vous devrez vous rendre ...",
+		"indicePassword": "Le mot de passe qui vous premettra d'accèder à l'incide suivane est ..."
+	}
+]

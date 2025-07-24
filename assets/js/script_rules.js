@@ -11,17 +11,3 @@ rulesButton.addEventListener("click", () => {
 		ul.style.visibility = "visible";
 	}
 });
-
-// const indice = document.querySelector(".indice");
-// const input = document.querySelector("#mdp");
-// const button = document.querySelector("#send-mdp");
-// const error = document.querySelector("#error");
-
-// button.addEventListener("click", () => {
-// 	let value = input.value;
-// 	if (value.toLowerCase() === "toto") {
-// 		indice.classList.toggle("inactive");
-// 	} else {
-// 		error.textContent = "Oups mauvais mot de passe";
-// 	}
-// });

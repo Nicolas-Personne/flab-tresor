@@ -25,6 +25,7 @@ header {
 	right: 10px;
 	font-size: 1rem;
 	z-index: 99;
+	cursor: pointer;
 }
 #rules {
 	display: flex;
@@ -51,15 +52,20 @@ ul li {
 }
 
 main {
-	display: flex;
 	width: 100%;
-	justify-content: center;
 }
-main article {
+main article,
+main .game {
 	display: flex;
 	width: 70%;
+	margin: 0 auto;
 	flex-direction: column;
 }
 .inactive {
 	display: none;
+}
+
+.ready {
+	font-size: 2rem;
+	text-align: center;
 }

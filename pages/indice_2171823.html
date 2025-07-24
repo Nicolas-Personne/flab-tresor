@@ -1,28 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../assets/css/style.css" />
+		<script
+			defer
+			src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"
+			integrity="sha512-b+nQTCdtTBIRIbraqNEwsjB6UvL3UEMkXnhzd8awtCYh0Kcsjl9uEgwVFVbhoj3uu1DO1ZMacNvLoyJJiNfcvg=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+		<script defer src="../assets/js/dataLoader.js"></script>
+		<script defer src="../assets/js/script_rules.js"></script>
+		<script defer src="../assets/js/script_check_pass.js"></script>
 		<title>Document</title>
 	</head>
 	<body>
+		<p id="rules-displayer">
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				width="16"
+				height="16"
+				fill="currentColor"
+				class="bi bi-question-circle-fill"
+				viewBox="0 0 16 16"
+			>
+				<path
+					d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.496 6.033h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286a.237.237 0 0 0 .241.247m2.325 6.443c.61 0 1.029-.394 1.029-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94 0 .533.425.927 1.01.927z"
+				/>
+			</svg>
+		</p>
+		<header>
+			<h1>LE JEU</h1>
+			<div id="rules">
+				<ul>
+					<li>Règle n°1 : Ne partagez aucun indice trouvé.</li>
+					<li>
+						Règle n°2 : Vous ne pouvez avancer qu'en résolvant les énigmes dans
+						l'ordre.
+					</li>
+					<li>
+						Règle n°3 : L'entraide est permise… jusqu'au moment où le trésor est
+						découvert.
+					</li>
+					<li>Règle n°4 : Amusez-vous et profitez de l'aventure !</li>
+				</ul>
+			</div>
+		</header>
 		<p id="error"></p>
 		<main>
 			<div>
-				<h2>Indice n°1</h2>
+				<h2>Indice n°</h2>
 				<p>Pour dévérouiller l'indice, veuillez entrer le mot de passe</p>
 				<input value="" id="mdp" />
 				<button id="send-mdp">Valider</button>
 			</div>
 			<article class="inactive indice">
-				<p>
-					Super, vous avez trouvé le premier indice, pour trouver le suivant, il
-					faudra vous rendre a un endroit chaud, treès chaud
-				</p>
-				<p>
-					Pour dévrouiller le prochain indice, le mot devra vous faire penser à
-					Jurrasic park... Mais de notre temps
-				</p>
+				<p></p>
+				<p></p>
 			</article>
 		</main>
 	</body>

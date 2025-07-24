@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css"
+			integrity="sha384-NvKbDTEnL+A8F/AA5Tc5kmMLSJHUO868P+lDtTpJIeQdGYaUIuLr4lVGOEA1OcMy"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="./assets/css/style.css" />
+		<script
+			defer
+			src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"
+		></script>
+		<script defer src="./assets/js/script.js"></script>
+		<script defer src="./assets/js/edit.js"></script>
+		<title>Panel Admin</title>
+	</head>
+	<body>
+		<h1>Bienvenue sur le panel Admin</h1>
+		<p class="info">Ici vous pouvez modifier les incides !</p>
+		<p class="info">
+			N'oubliez pas de régénérer les QR code si vous ajouter ou retirer les
+			indices
+		</p>
+		<p class="tips">
+			Conseil : Imprimer les QR codes que quand vous aves tout fini
+		</p>
+		<div class="list-indices"></div>
+		<div class="pop-up">
+			<button class="close-pop-up">Close</button>
+			<form action="">
+				<label for="">Mot de passe pour débloquer l'indice selectionné</label>
+				<input type="text" id="pass" />
+				<label for="">Indice sur la localisation du prochain QR</label>
+				<textarea id="tips-local"></textarea>
+				<label for="">Indice sur le mot de passe du prochain QR</label>
+				<textarea id="tips-pass"></textarea>
+				<button type="submit">Modifier</button>
+			</form>
+		</div>
+	</body>
+</html>
