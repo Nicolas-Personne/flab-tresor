@@ -1,11 +1,12 @@
-const actualList = document.querySelectorAll(".edit");
 const form = document.querySelector("form");
 const tipsLocal = document.querySelector("#tips-local");
 const tipsPass = document.querySelector("#tips-pass");
 const pass = document.querySelector("#pass");
 const popUp = document.querySelector(".pop-up");
 const closePop = document.querySelector(".close-pop-up");
+const buttonAdd = document.querySelector("#add-button");
 let id;
+
 const togglePopUp = () => {
 	if (popUp.style.display === "none" || !popUp.style.display) {
 		popUp.style.display = "block";
@@ -18,37 +19,25 @@ const fillForm = (indice) => {
 	tipsPass.value = indice.indicePassword;
 	pass.value = indice.pass;
 };
-actualList.forEach((button) => {
-	button.addEventListener("click", (e) => {
-		togglePopUp();
-		id = e.target.id.split("-")[1];
-		let indicesList = getIndice();
-		let actualIndice = indicesList.filter((item) => {
-			return item.id.toString() === id;
-		});
-		fillForm(actualIndice[0]);
-	});
+buttonAdd.addEventListener("click", () => {
+	togglePopUp();
 });
-
 form.addEventListener("submit", (e) => {
 	e.preventDefault();
-	let tipLocal = tipsLocal.value;
-	let tipPass = tipsPass.value;
-	let newPass = pass.value;
-	let indicesList = getIndice();
-	indicesList = indicesList.map((obj) => {
-		return obj.id.toString() === id
-			? {
-					...obj,
-					pass: newPass,
-					indiceLocalisation: tipLocal,
-					indicePassword: tipPass,
-			  }
-			: obj;
+	let indiceList = getIndice();
+	let id = indiceList ? indiceList[indiceList.length - 1].id + 1 : 1;
+	let data = {
+		id: id,
+		indiceLocalisation: tipsLocal.value,
+		indicePassword: tipsPass.value,
+		pass: pass.value,
+	};
+	login().then((user) => {
+		console.log("Connecté en tant que :", user.email);
+		saveIndice(data);
 	});
-	saveIndice(indicesList);
 	togglePopUp();
-	loadData();
+	// loadData();
 });
 closePop.addEventListener("click", () => {
 	togglePopUp();

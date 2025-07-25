@@ -14,8 +14,9 @@
 			defer
 			src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"
 		></script>
+		<script src="../firebase/connect.js" type="module"></script>
 		<script defer src="./assets/js/script.js"></script>
-		<script defer src="./assets/js/edit.js"></script>
+		<script defer src="./assets/js/create.js"></script>
 		<title>Panel Admin</title>
 	</head>
 	<body>
@@ -28,6 +29,7 @@
 		<p class="tips">
 			Conseil : Imprimer les QR codes que quand vous aves tout fini
 		</p>
+		<button id="add-button">Ajouter un indice</button>
 		<div class="list-indices"></div>
 		<div class="pop-up">
 			<button class="close-pop-up">Close</button>
