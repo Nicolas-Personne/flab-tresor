@@ -9,7 +9,7 @@ let id;
 
 const togglePopUp = () => {
 	if (popUp.style.display === "none" || !popUp.style.display) {
-		popUp.style.display = "block";
+		popUp.style.display = "flex";
 	} else {
 		popUp.style.display = "none";
 	}
