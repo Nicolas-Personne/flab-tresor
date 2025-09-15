@@ -46,6 +46,9 @@ header {
 ul li {
 	margin-bottom: 15px;
 }
+ul li p {
+	font-weight: 600;
+}
 .tips {
 	color: #ff0505;
 	font-style: italic;

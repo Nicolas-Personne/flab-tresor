@@ -10,39 +10,50 @@
 			crossorigin="anonymous"
 		/>
 		<link rel="stylesheet" href="./assets/css/style.css" />
-		<script defer src="./assets/js/script.js"></script>
 		<script defer src="./assets/js/action.js"></script>
+		<script defer src="./assets/js/scripts.js"></script>
 		<title>Panel Admin</title>
 	</head>
 	<body>
 		<h1>Bienvenue sur le panel Admin</h1>
-		<p class="info">Ici vous pouvez modifier les incides !</p>
-		<p class="info">
-			N'oubliez pas de régénérer les QR code si vous ajouter ou retirer les
-			indices
-		</p>
-		<p class="tips">
-			Conseil : Imprimer les QR codes que quand vous aves tout fini
-		</p>
-		<button id="add-button">Ajouter un indice</button>
-		<div class="list-indices"></div>
-		<div class="pop-up">
-			<button class="close-pop-up">Close</button>
-			<form action="" class="form">
+		<div id="login-admin">
+			<form action="" id="login-admin-form">
 				<div class="form-group">
-					<label for="">Mot de passe pour débloquer l'indice selectionné</label>
-					<input type="text" id="pass" />
+					<label for="email">Email</label>
+					<input id="email" value="nico.personne@gmail.com" />
 				</div>
 				<div class="form-group">
-					<label for="">Indice sur la localisation du prochain QR</label>
-					<textarea id="tips-local"></textarea>
+					<label for="password">Mot de passe</label>
+					<input id="password" value="CTqEJ4jHNVFFa$v89Fh&" />
 				</div>
-				<div class="form-group">
-					<label for="">Indice sur le mot de passe du prochain QR</label>
-					<textarea id="tips-pass"></textarea>
-				</div>
-				<button type="submit">Modifier</button>
+				<button type="submit">Se connecter</button>
 			</form>
+		</div>
+		<div id="connected-admin">
+			<p class="info">Ici vous pouvez modifier les incides !</p>
+			<button id="add-button">Ajouter un indice</button>
+			<div class="list-indices"></div>
+			<div class="pop-up">
+				<button class="close-pop-up">Close</button>
+				<form action="" class="form-add">
+					<input type="hidden" value="" name="edit" id="hidden" />
+					<div class="form-group">
+						<label for="">Mot de passe pour débloquer cet indice</label>
+						<input type="text" id="pass" />
+					</div>
+					<div class="form-group">
+						<label for="">Indice sur la localisation du prochain QR</label>
+						<textarea id="tips-local"></textarea>
+					</div>
+					<div class="form-group">
+						<label for=""
+							>Question permettant de débloquer le prochain QR</label
+						>
+						<textarea id="tips-pass"></textarea>
+					</div>
+					<button type="submit">Modifier</button>
+				</form>
+			</div>
 		</div>
 	</body>
 </html>

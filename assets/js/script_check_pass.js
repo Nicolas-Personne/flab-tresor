@@ -5,7 +5,8 @@ const error = document.querySelector("#error");
 if (button) {
 	button.addEventListener("click", () => {
 		let value = input.value;
-		if (value.toLowerCase() === indices_info[0].pass) {
+
+		if (value.toLowerCase() === indices_info[0].response) {
 			indice.classList.toggle("inactive");
 		} else {
 			error.textContent =

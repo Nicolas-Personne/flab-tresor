@@ -4,11 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="./assets/css/style.css" />
-		<script
-			defer
-			src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"
-		></script>
-		<script src="./firebase/connect.js" type="module"></script>
+		<script defer src="./admin/assets/js/action.js"></script>
 		<script defer src="./assets/js/dataLoader.js"></script>
 		<script defer src="./assets/js/script_rules.js"></script>
 		<script defer src="./assets/js/script_check_pass.js"></script>
@@ -68,10 +64,12 @@
 			</article>
 			<div class="game">
 				<p class="ready">Êtes vous prêts ?</p>
-				<h3>Voici le premier indice :</h3>
+				<h3>Voici le premier indice : (il vous servira à trouver le prochain QR Code)</h3>
 				<article class="inactive indice">
-					<p></p>
-					<p></p>
+					<ul>
+						<li>Indice sur la localisation du prochain QR Code :</li>
+						<li>Question à répondre quand le QR code sera trouvé : </li>
+					</ul>
 				</article>
 			</div>
 		</main>

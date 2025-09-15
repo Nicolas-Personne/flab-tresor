@@ -3,19 +3,18 @@ let indices_info = [];
 document.addEventListener("DOMContentLoaded", async () => {
 	let title = document.querySelector("main div h2");
 	let displayLocalisation = document.querySelector(
-		"article.indice p:nth-child(1)"
+		"article.indice ul li:nth-child(1)"
 	);
 
-	let displayPassword = document.querySelector("article.indice p:nth-child(2)");
-	const loadData = async () => {
-		data = await fetch("http://127.0.0.1:5500/assets/data/data.json");
-		return data.json();
-	};
-	let isData = getIndice();
+	let displayPassword = document.querySelector(
+		"article.indice ul li:nth-child(2)"
+	);
 
-	data = !isData ? await loadData() : isData;
+	let data = await getData();
+	console.log(data);
+
 	if (window.location.pathname === "/") {
-		indices_info = data.filter((value) => value.id == 0);
+		indices_info = data.indices.filter((value) => value.id == 1);
 		const indice = document.querySelector(".indice");
 		indice.classList.toggle("inactive");
 	} else {
@@ -23,12 +22,15 @@ document.addEventListener("DOMContentLoaded", async () => {
 			.split("/")[2]
 			.split("_")[1]
 			.split("")[3];
-		indices_info = data.filter((value) => value.id == indice_number);
+		indices_info = data.indices.filter((value) => value.id == indice_number);
 	}
 	if (title) {
 		title.textContent += indices_info[0].id;
 	}
-
-	displayLocalisation.textContent = indices_info[0].indiceLocalisation;
-	displayPassword.textContent = indices_info[0].indicePassword;
+	let p1 = document.createElement("p");
+	let p2 = document.createElement("p");
+	p1.textContent = indices_info[0].indice;
+	p2.textContent = indices_info[0].question;
+	displayLocalisation.appendChild(p1);
+	displayPassword.appendChild(p2);
 });
