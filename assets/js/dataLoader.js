@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 		}
 	}
 	if (title) {
-		title.textContent += indices_info[0].id;
+		title.textContent += indice_number;
 	}
 	let p1 = document.createElement("p");
 	let p2 = document.createElement("p");
