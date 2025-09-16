@@ -13,16 +13,20 @@ document.addEventListener("DOMContentLoaded", async () => {
 	let data = await getData();
 
 	if (window.location.pathname === "/") {
-		indices_info = data.indices.filter((value) => value.id == 1);
-		const indice = document.querySelector(".indice");
-		indice.classList.toggle("inactive");
+		if (data) {
+			indices_info = data.indices.filter((value) => value.id == 1);
+			const indice = document.querySelector(".indice");
+			indice.classList.toggle("inactive");
+		}
 	} else {
 		let indice_number = window.location.pathname
 			.split("/")[2]
 			.split("_")[1]
 			.split("")[3];
 		let indiceToFind = Number(indice_number) + 1;
-		indices_info = data.indices.filter((value) => value.id === indiceToFind);
+		if (data) {
+			indices_info = data.indices.filter((value) => value.id === indiceToFind);
+		}
 	}
 	if (title) {
 		title.textContent += indices_info[0].id;
