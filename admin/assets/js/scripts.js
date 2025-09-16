@@ -29,6 +29,7 @@ const checkLog = () => {
 		return true;
 	}
 };
+
 const loadForm = () => {
 	loginForm.style.display = "flex";
 	connected.style.display = "none";

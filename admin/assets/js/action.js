@@ -1,6 +1,12 @@
 const BASE_URL = "https://flab-tresor-api.onrender.com/";
 const getData = async () => {
-	let response = await fetch(`${BASE_URL}indices`);
+	let token = localStorage.getItem("token");
+	let response = await fetch(`${BASE_URL}indices`, {
+		headers: {
+			"Content-Type": "application/json",
+			Authorization: "Bearer " + token,
+		},
+	});
 	if (response.status === 403 || response.status === 401) {
 		localStorage.removeItem("token");
 	}

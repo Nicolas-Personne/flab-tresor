@@ -22,7 +22,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 			.split("/")[2]
 			.split("_")[1]
 			.split("")[3];
-		indices_info = data.indices.filter((value) => value.id == indice_number);
+		let indiceToFind = Number(indice_number) + 1;
+		indices_info = data.indices.filter((value) => value.id === indiceToFind);
 	}
 	if (title) {
 		title.textContent += indices_info[0].id;
