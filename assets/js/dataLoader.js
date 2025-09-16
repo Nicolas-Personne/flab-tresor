@@ -11,6 +11,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 	);
 
 	let data = await getData();
+	console.log(window.location);
+	console.log(window.location.pathname);
 
 	if (window.location.pathname === "/") {
 		if (data) {
