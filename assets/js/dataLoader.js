@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 	);
 
 	let data = await getData();
-	console.log(data);
 
 	if (window.location.pathname === "/") {
 		indices_info = data.indices.filter((value) => value.id == 1);
