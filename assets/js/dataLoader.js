@@ -14,15 +14,15 @@ document.addEventListener("DOMContentLoaded", async () => {
 	console.log(window.location);
 	console.log(window.location.pathname);
 
-	if (window.location.pathname === "/") {
+	if (window.location.pathname === "/flab-tresor/") {
 		if (data) {
 			indices_info = data.indices.filter((value) => value.id == 1);
 			const indice = document.querySelector(".indice");
 			indice.classList.toggle("inactive");
 		}
 	} else {
-		let indice_number = window.location.pathname
-			.split("/")[2]
+		let pathArray = window.location.pathname.split("/");
+		let indice_number = pathArray[pathArray.length - 1]
 			.split("_")[1]
 			.split("")[3];
 		let indiceToFind = Number(indice_number) + 1;
