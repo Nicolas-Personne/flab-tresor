@@ -11,10 +11,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 	);
 
 	let data = await getData();
-	console.log(window.location);
-	console.log(window.location.pathname);
-
-	if (window.location.pathname === "/flab-tresor/") {
+	let indice_number = 0;
+	if (window.location.pathname === "/") {
 		if (data) {
 			indices_info = data.indices.filter((value) => value.id == 1);
 			const indice = document.querySelector(".indice");
@@ -22,17 +20,16 @@ document.addEventListener("DOMContentLoaded", async () => {
 		}
 	} else {
 		let pathArray = window.location.pathname.split("/");
-		let indice_number = pathArray[pathArray.length - 1]
-			.split("_")[1]
-			.split("")[3];
+		indice_number = pathArray[pathArray.length - 1].split("_")[1].split("")[3];
 		let indiceToFind = Number(indice_number) + 1;
 		if (data) {
 			indices_info = data.indices.filter((value) => value.id === indiceToFind);
 		}
 	}
 	if (title) {
-		title.textContent += indices_info[0].id;
+		title.textContent += indice_number;
 	}
+
 	let p1 = document.createElement("p");
 	let p2 = document.createElement("p");
 	p1.textContent = indices_info[0].indice;
