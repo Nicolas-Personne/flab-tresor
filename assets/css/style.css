@@ -120,3 +120,11 @@ button {
 	width: 50%;
 	margin: 0 auto;
 }
+
+.text-align-center {
+	text-align: center;
+}
+.important {
+	font-size: 2rem;
+	font-weight: 700;
+}

@@ -31,9 +31,10 @@ document.addEventListener("DOMContentLoaded", async () => {
 	}
 
 	let p1 = document.createElement("p");
+	p1.style.fontWeight = 600;
 	let p2 = document.createElement("p");
-	p1.textContent = indices_info[0].indice;
-	p2.textContent = indices_info[0].question;
+	p1.textContent += indices_info[0].indice;
+	p2.textContent += indices_info[0].question;
 	displayLocalisation.appendChild(p1);
 	displayPassword.appendChild(p2);
 });
