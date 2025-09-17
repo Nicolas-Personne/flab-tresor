@@ -54,9 +54,9 @@ ul li p {
 	font-style: italic;
 }
 
-main {
+/* main {
 	width: 100%;
-}
+} */
 main article,
 main .game {
 	display: flex;
@@ -71,4 +71,52 @@ main .game {
 .ready {
 	font-size: 2rem;
 	text-align: center;
+}
+
+.indice {
+	padding: 20px;
+}
+.first.indice {
+	width: 100%;
+}
+.indice ul {
+	margin: 0;
+	padding: 0;
+}
+
+input {
+	padding: 5px 5px;
+	/* width: 100%; */
+}
+button {
+	background-color: #226daa;
+	color: #fff;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 2px;
+	cursor: pointer;
+	/* width: 100%; */
+	font-weight: 600;
+}
+
+#form-indice {
+	display: flex;
+	flex-direction: column;
+	/* width: 100%; */
+	/* flex-wrap: wrap; */
+	padding: 20px;
+	margin: 0 auto;
+	align-items: center;
+	row-gap: 10px;
+}
+#form-indice p,
+#form-indice h2 {
+	width: 100%;
+	text-align: center;
+}
+#error {
+	color: crimson;
+	text-align: center;
+	width: 50%;
+	margin: 0 auto;
 }
