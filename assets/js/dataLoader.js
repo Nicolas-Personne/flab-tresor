@@ -34,8 +34,20 @@ document.addEventListener("DOMContentLoaded", async () => {
 	let p1 = document.createElement("p");
 	p1.style.fontWeight = 600;
 	let p2 = document.createElement("p");
-	p1.textContent += indices_info[0].indice;
-	p2.textContent += indices_info[0].question;
+	if(indices_info[0].id === 6){
+		console.log(indices_info);
+		p2.innerHTML += `<p>"Compléter la phrase suivante : "La vie c'est comme une boîte de chocolats ..." </p>
+		<pre>
+A) ca dur moins longtemps chez les gros.(oui on a osé…)
+B) on ne sait jamais sur quoi on va tomber.
+C) j'aime que les noirs.
+D) c'est meilleur sans alcool.
+</pre>
+`
+	}else {
+		p1.textContent += indices_info[0].indice;
+		p2.textContent += indices_info[0].question;
+	}
 	displayLocalisation.appendChild(p1);
 	displayPassword.appendChild(p2);
 });
