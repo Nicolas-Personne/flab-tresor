@@ -12,7 +12,9 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 	let data = await getData();
 	let indice_number = 0;
+	console.log(window.location.pathname); 
 	if (window.location.pathname === "/flab-tresor/") {
+		
 		if (data) {
 			indices_info = data.indices.filter((value) => value.id == 1);
 			const indice = document.querySelector(".indice");
